@@ -1,7 +1,16 @@
 import PropTypes from "prop-types";
 import styles from "./profile.module.css";
 
-export default function Profile({ avatar, name, tag, location, stats }) {
+const defaultImage =
+  "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg";
+
+export default function Profile({
+  avatar = defaultImage,
+  name,
+  tag,
+  location,
+  stats,
+}) {
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
